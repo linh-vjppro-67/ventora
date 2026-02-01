@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Construction ERP Design System
+   Professional, data-focused, enterprise-grade
+*/
+
+@layer base {
+  :root {
+    /* Core Colors - Deep Professional Blue */
+    --background: 220 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary - Deep Navy Blue */
+    --primary: 222 83% 24%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary - Slate */
+    --secondary: 215 16% 94%;
+    --secondary-foreground: 222 47% 20%;
+
+    /* Muted */
+    --muted: 215 20% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Soft Blue */
+    --accent: 213 94% 96%;
+    --accent-foreground: 222 83% 24%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 222 83% 24%;
+
+    --radius: 0.5rem;
+
+    /* Status Colors */
+    --status-draft: 215 16% 47%;
+    --status-pending: 38 92% 50%;
+    --status-approved: 142 76% 36%;
+    --status-rejected: 0 72% 51%;
+    --status-active: 213 94% 50%;
+    --status-closed: 215 16% 60%;
+    --status-won: 142 76% 36%;
+    --status-lost: 0 72% 51%;
+
+    /* Chart Colors */
+    --chart-1: 222 83% 24%;
+    --chart-2: 213 94% 50%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 72% 51%;
+
+    /* Sidebar */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 222 40% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 20%;
+    --sidebar-ring: 213 94% 50%;
+    --sidebar-muted: 215 16% 60%;
+
+    /* Kanban */
+    --kanban-lead: 215 16% 95%;
+    --kanban-prep: 213 94% 96%;
+    --kanban-submitted: 38 92% 95%;
+    --kanban-negotiating: 271 81% 96%;
+    --kanban-won: 142 76% 95%;
+    --kanban-lost: 0 72% 96%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(222 83% 24%) 0%, hsl(213 94% 35%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 70% 45%) 100%);
+    --gradient-warning: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(45 93% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 213 94% 55%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 40% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 40% 15%;
+    --muted-foreground: 215 16% 60%;
+
+    --accent: 222 40% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 213 94% 55%;
+
+    --sidebar-background: 222 47% 4%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 213 94% 55%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 40% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 15%;
+    --sidebar-ring: 213 94% 55%;
+    --sidebar-muted: 215 16% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+  }
+}
+
+@layer utilities {
+  /* Status Badge Utilities */
+  .status-draft {
+    @apply bg-muted text-muted-foreground;
+  }
+
+  .status-pending {
+    background-color: hsl(var(--status-pending) / 0.15);
+    color: hsl(var(--status-pending));
+  }
+
+  .status-approved {
+    background-color: hsl(var(--status-approved) / 0.15);
+    color: hsl(var(--status-approved));
+  }
+
+  .status-rejected {
+    background-color: hsl(var(--status-rejected) / 0.15);
+    color: hsl(var(--status-rejected));
+  }
+
+  .status-active {
+    background-color: hsl(var(--status-active) / 0.15);
+    color: hsl(var(--status-active));
+  }
+
+  .status-won {
+    background-color: hsl(var(--status-won) / 0.15);
+    color: hsl(var(--status-won));
+  }
+
+  .status-lost {
+    background-color: hsl(var(--status-lost) / 0.15);
+    color: hsl(var(--status-lost));
+  }
+
+  /* Card Hover Effect */
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:border-primary/20 hover:-translate-y-0.5;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Kanban Column Backgrounds */
+  .kanban-lead {
+    background-color: hsl(var(--kanban-lead));
+  }
+  .kanban-prep {
+    background-color: hsl(var(--kanban-prep));
+  }
+  .kanban-submitted {
+    background-color: hsl(var(--kanban-submitted));
+  }
+  .kanban-negotiating {
+    background-color: hsl(var(--kanban-negotiating));
+  }
+  .kanban-won {
+    background-color: hsl(var(--kanban-won));
+  }
+  .kanban-lost {
+    background-color: hsl(var(--kanban-lost));
+  }
+
+  /* Scrollbar Styling */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground));
+  }
+}
+
+/* Custom Animations */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.3s ease-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}

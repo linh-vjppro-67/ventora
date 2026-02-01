@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#f6f7f9"/>
+  <rect x="140" y="90" width="920" height="620" rx="18" fill="#ffffff" stroke="#d9dde5" stroke-width="4"/>
+  <rect x="140" y="90" width="920" height="70" rx="18" fill="#eef2ff"/>
+  <g stroke="#c7d2fe" stroke-width="2">
+    <line x1="220" y1="160" x2="220" y2="710"/>
+    <line x1="340" y1="160" x2="340" y2="710"/>
+    <line x1="500" y1="160" x2="500" y2="710"/>
+    <line x1="680" y1="160" x2="680" y2="710"/>
+    <line x1="860" y1="160" x2="860" y2="710"/>
+  </g>
+  <g stroke="#e5e7eb" stroke-width="2">
+    <line x1="140" y1="220" x2="1060" y2="220"/>
+    <line x1="140" y1="280" x2="1060" y2="280"/>
+    <line x1="140" y1="340" x2="1060" y2="340"/>
+    <line x1="140" y1="400" x2="1060" y2="400"/>
+    <line x1="140" y1="460" x2="1060" y2="460"/>
+    <line x1="140" y1="520" x2="1060" y2="520"/>
+    <line x1="140" y1="580" x2="1060" y2="580"/>
+    <line x1="140" y1="640" x2="1060" y2="640"/>
+  </g>
+  <text x="190" y="136" font-family="ui-sans-serif, system-ui" font-size="22" fill="#111827" font-weight="700">Budget vs Actual (mock)</text>
+  <text x="190" y="686" font-family="ui-sans-serif, system-ui" font-size="14" fill="#6b7280">Preview hard-code để demo UI DMS</text>
+</svg>
