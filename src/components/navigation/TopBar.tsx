@@ -137,7 +137,7 @@ export function TopBar() {
             <div className="flex flex-col space-y-1">
               <p className="text-sm font-medium">Nguyễn Văn An</p>
               <p className="text-xs text-muted-foreground">
-                an.nguyen@company.vn
+                an.nguyen@ventora.vn
               </p>
             </div>
           </DropdownMenuLabel>

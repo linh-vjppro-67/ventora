@@ -47,6 +47,7 @@ import RFIChangeRequests from "@/pages/engineering/RFIChangeRequests";
 import EngineeringApprovalInbox from "@/pages/engineering/ApprovalInbox";
 // DMS
 import DMSHome from "@/pages/dms/DMSHome";
+import SettingsHome from "@/pages/settings/SettingsHome";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -119,7 +120,7 @@ const App = () => (
             {/* Backward compatible */}
             <Route path="/construction/projects/:id" element={<ProjectWorkspace />} />
             <Route path="/dms" element={<DMSHome />} />
-            <Route path="/settings" element={<PlaceholderPage title="Hệ thống" />} />
+            <Route path="/settings" element={<SettingsHome />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
@@ -127,19 +128,5 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
-
-// Placeholder component for unimplemented pages
-function PlaceholderPage({ title }: { title: string }) {
-  return (
-    <div className="flex flex-col items-center justify-center py-24">
-      <div className="text-center max-w-md">
-        <h1 className="text-2xl font-bold mb-2">{title}</h1>
-        <p className="text-muted-foreground">
-          Module này đang được phát triển. Vui lòng quay lại sau.
-        </p>
-      </div>
-    </div>
-  );
-}
 
 export default App;

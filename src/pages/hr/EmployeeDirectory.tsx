@@ -297,7 +297,7 @@ function EmployeeForm({ onSubmit }: { onSubmit: (payload: any) => void }) {
         const payload = {
           code,
           name,
-          email: email || `${name.toLowerCase().replace(/\s+/g, '.')}@company.vn`,
+          email: email || `${name.toLowerCase().replace(/\s+/g, '.')}@ventora.vn`,
           department,
           position,
           phone: phone || '0900000000',
@@ -318,7 +318,7 @@ function EmployeeForm({ onSubmit }: { onSubmit: (payload: any) => void }) {
         </div>
         <div className="space-y-2">
           <Label>Email</Label>
-          <Input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="a.nguyen@company.vn" />
+          <Input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="a.nguyen@ventora.vn" />
         </div>
         <div className="space-y-2">
           <Label>SĐT</Label>

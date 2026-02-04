@@ -97,7 +97,7 @@ export function AppSidebar() {
                 className="overflow-hidden"
               >
                 <h1 className="text-lg font-bold text-sidebar-foreground whitespace-nowrap">
-                  ConstructionERP
+                  Ventora ERP System
                 </h1>
               </motion.div>
             )}
